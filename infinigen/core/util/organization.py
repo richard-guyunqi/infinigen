@@ -11,6 +11,7 @@ class Task:
     Render = "render"
     GroundTruth = "ground_truth"
     MeshSave = "mesh_save"
+    Export = "export"
 
 
 class Materials:
@@ -23,7 +24,18 @@ class Materials:
     Atmosphere = "atmosphere"
     Clouds = "clouds"
     Beach = "beach"
-    all = [GroundCollection, MountainCollection, Eroded, LiquidCollection, Lava, Snow, Atmosphere, Clouds, Beach]
+    all = [
+        GroundCollection,
+        MountainCollection,
+        Eroded,
+        LiquidCollection,
+        Lava,
+        Snow,
+        Atmosphere,
+        Clouds,
+        Beach,
+    ]
+
 
 class LandTile:
     Canyon = "Canyon"
@@ -36,10 +48,12 @@ class LandTile:
     Coast = "Coast"
     MultiMountains = "MultiMountains"
 
+
 class Assets:
     Caves = "Caves"
     UpsidedownMountains = "UpsidedownMountains"
     Ocean = "Ocean"
+
 
 class AssetFile:
     Heightmap = "heightmap"
@@ -48,20 +62,24 @@ class AssetFile:
     Params = "params"
     Finish = "finish"
 
+
 class Process:
     Snowfall = "snowfall"
     Erosion = "erosion"
-    IceErosion = 'ice_erosion'
+    IceErosion = "ice_erosion"
     Eruption = "eruption"
+
 
 class TerrainNames:
     OpaqueTerrain = "OpaqueTerrain"
     CollectiveTransparentTerrain = "CollectiveTransparentTerrain"
 
+
 class Transparency:
     IndividualTransparent = "IndividualTransparent"
     CollectiveTransparent = "CollectiveTransparent"
     Opaque = "Opaque"
+
 
 class ElementNames:
     Atmosphere = "atmosphere"
@@ -78,6 +96,7 @@ class ElementNames:
     Volcanos = "volcanos"
     FloatingIce = "floating_ice"
 
+
 class Tags:
     Cave = "cave"
     LiquidCovered = "liquid_covered"
@@ -86,13 +105,16 @@ class Tags:
     Landscape = "landscape"
     OutOfView = "out_of_view"
 
+
 class Attributes:
     BoundarySDF = "BoundarySDF"
     ElementTag = "ElementTag"
 
+
 class SelectionCriterions:
     CloseUp = "closeup"
     Altitude = "altitude"
+
 
 class ElementTag:
     Liquid = 0
@@ -106,9 +128,17 @@ class ElementTag:
     UpsidedownMountains = 8
     total_cnt = 9
     map = [
-        ElementNames.Liquid, ElementNames.Clouds, Tags.Terrain, ElementNames.WarpedRocks, ElementNames.VoronoiRocks,
-        ElementNames.VoronoiGrains, ElementNames.Volcanos, ElementNames.FloatingIce, ElementNames.UpsidedownMountains,
+        ElementNames.Liquid,
+        ElementNames.Clouds,
+        Tags.Terrain,
+        ElementNames.WarpedRocks,
+        ElementNames.VoronoiRocks,
+        ElementNames.VoronoiGrains,
+        ElementNames.Volcanos,
+        ElementNames.FloatingIce,
+        ElementNames.UpsidedownMountains,
     ]
+
 
 class SurfaceTypes:
     BlenderDisplacement = "BlenderDisplacement"
